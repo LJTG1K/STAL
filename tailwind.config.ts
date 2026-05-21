@@ -110,28 +110,28 @@ const config: Config = {
     },
   },
   plugins: [
-    function ({ addBase, addComponents, theme }) {
+    function ({ addBase, addComponents, theme }: any) {
       // Global grain texture
       addBase({
         '@supports (backdrop-filter: blur(0px))': {
           '*': {
-            '--tw-bg-opacity': '1',
+            '--tw-bg-opacity': '1' as any,
           },
         },
         'html': {
-          scrollBehavior: 'instant',
+          scrollBehavior: 'instant' as any,
         },
-      })
+      } as any)
 
       // Frosted glass component
       addComponents({
         '.glass-frost': {
-          '@apply bg-opacity-50 backdrop-blur-sm border border-neutral-200 border-opacity-20': {},
+          '@apply bg-opacity-50 backdrop-blur-sm border border-neutral-200 border-opacity-20': {} as any,
         },
         '.sharp-edge': {
-          '@apply border-l border-t border-neutral-900 border-opacity-20': {},
+          '@apply border-l border-t border-neutral-900 border-opacity-20': {} as any,
         },
-      })
+      } as any)
     },
   ],
 }

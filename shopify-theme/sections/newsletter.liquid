@@ -1,0 +1,56 @@
+<!-- STAL Newsletter Section -->
+
+<section class="bg-neutral-100 py-20 md:py-32 border-t border-neutral-200">
+  <div class="container mx-auto px-4 max-w-2xl text-center">
+    <h2 class="text-4xl font-heading font-bold text-neutral-900 mb-4">
+      Stay Updated
+    </h2>
+    <p class="text-neutral-600 mb-8 leading-relaxed">
+      Subscribe to get updates on new releases, care tips, and exclusive early access to limited editions.
+    </p>
+
+    <form class="flex flex-col sm:flex-row gap-3">
+      <input 
+        type="email" 
+        placeholder="your@email.com"
+        required
+        class="flex-1 bg-white border border-neutral-200 px-4 py-4 text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-cyan-500 transition-colors font-mono text-sm"
+      >
+      <button 
+        type="submit"
+        class="px-8 py-4 bg-neutral-900 hover:bg-cyan-500 text-white font-mono font-bold tracking-wider transition-all duration-0 whitespace-nowrap"
+      >
+        SUBSCRIBE
+      </button>
+    </form>
+
+    <p class="text-xs text-neutral-500 mt-6">
+      We respect your privacy. Unsubscribe at any time.
+    </p>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Newsletter",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Stay Updated"
+      },
+      {
+        "type": "textarea",
+        "id": "description",
+        "label": "Description",
+        "default": "Subscribe to get updates on new releases and exclusive offers."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Newsletter"
+      }
+    ]
+  }
+{% endschema %}

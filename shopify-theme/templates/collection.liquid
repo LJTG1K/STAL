@@ -1,0 +1,168 @@
+<!-- STAL Collection / Shop Page -->
+
+<div class="container mx-auto px-4 py-12">
+  <!-- Page Header -->
+  <div class="mb-12">
+    <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 text-neutral-900">
+      {% if collection.title == 'all' %}
+        SHOP ALL
+      {% else %}
+        {{ collection.title | upcase }}
+      {% endif %}
+    </h1>
+    <p class="text-neutral-600 max-w-2xl leading-relaxed">
+      {{ collection.description }}
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+    <!-- Filter Sidebar -->
+    <div class="lg:col-span-1 border-r border-neutral-200 pr-8">
+      <div class="mb-8">
+        <h3 class="font-mono text-xs tracking-widest text-neutral-900 mb-4">FILTERS</h3>
+        
+        <!-- Price Filter -->
+        <details class="border-b border-neutral-200 py-4 cursor-pointer group">
+          <summary class="flex justify-between items-center font-mono text-sm text-neutral-900 list-none">
+            Price
+            <span class="group-open:rotate-180 transition-transform duration-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-4 space-y-2">
+            <label class="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-cyan-500">
+              <span>Under $20</span>
+            </label>
+            <label class="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-cyan-500">
+              <span>$20 - $50</span>
+            </label>
+            <label class="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-cyan-500">
+              <span>$50 - $100</span>
+            </label>
+            <label class="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-cyan-500">
+              <span>Over $100</span>
+            </label>
+          </div>
+        </details>
+
+        <!-- Type Filter -->
+        <details class="border-b border-neutral-200 py-4 cursor-pointer group">
+          <summary class="flex justify-between items-center font-mono text-sm text-neutral-900 list-none">
+            Type
+            <span class="group-open:rotate-180 transition-transform duration-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-4 space-y-2">
+            <label class="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-cyan-500">
+              <span>Flatware</span>
+            </label>
+            <label class="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-cyan-500">
+              <span>Serving</span>
+            </label>
+            <label class="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-cyan-500">
+              <span>Specialty</span>
+            </label>
+            <label class="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-cyan-500">
+              <span>Sets</span>
+            </label>
+          </div>
+        </details>
+
+        <!-- Material Filter -->
+        <details class="border-b border-neutral-200 py-4 cursor-pointer group">
+          <summary class="flex justify-between items-center font-mono text-sm text-neutral-900 list-none">
+            Material
+            <span class="group-open:rotate-180 transition-transform duration-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-4 space-y-2">
+            <label class="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-cyan-500" checked>
+              <span>18/10 Stainless Steel</span>
+            </label>
+            <label class="flex items-center gap-2 text-sm cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 accent-cyan-500">
+              <span>16/0 Stainless Steel</span>
+            </label>
+          </div>
+        </details>
+      </div>
+
+      <!-- Clear Filters -->
+      <button class="w-full py-3 border border-neutral-200 hover:border-cyan-500 text-neutral-900 font-mono text-xs tracking-widest transition-colors duration-0">
+        CLEAR ALL
+      </button>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="lg:col-span-3">
+      <!-- Sort Options -->
+      <div class="flex items-center justify-between mb-8 pb-6 border-b border-neutral-200">
+        <p class="text-sm text-neutral-600 font-mono">
+          Showing {{ paginate.items | size }} of {{ collection.products_count }} products
+        </p>
+        <select class="text-sm font-mono bg-transparent border border-neutral-200 px-3 py-2 hover:border-cyan-500 transition-colors cursor-pointer outline-none">
+          <option selected>Recommended</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest</option>
+          <option>Best Selling</option>
+        </select>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for product in collection.products %}
+          {% section 'product-card' %}
+        {% endfor %}
+      </div>
+
+      <!-- Pagination -->
+      {% if paginate.pages > 1 %}
+        <div class="mt-12 flex justify-center gap-2">
+          {% if paginate.previous %}
+            <a href="{{ paginate.previous.url }}" class="px-4 py-2 border border-neutral-200 hover:border-cyan-500 text-sm font-mono transition-colors">
+              ← Previous
+            </a>
+          {% endif %}
+
+          {% for page in (1..paginate.pages) %}
+            {% if page == paginate.current_page %}
+              <span class="px-4 py-2 bg-cyan-500 text-white text-sm font-mono">
+                {{ page }}
+              </span>
+            {% else %}
+              <a href="{{ page.url }}" class="px-4 py-2 border border-neutral-200 hover:border-cyan-500 text-sm font-mono transition-colors">
+                {{ page }}
+              </a>
+            {% endif %}
+          {% endfor %}
+
+          {% if paginate.next %}
+            <a href="{{ paginate.next.url }}" class="px-4 py-2 border border-neutral-200 hover:border-cyan-500 text-sm font-mono transition-colors">
+              Next →
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% paginate collection.products by 12 %}{% endpaginate %}

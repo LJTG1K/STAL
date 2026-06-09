@@ -1,0 +1,86 @@
+{
+  "general": {
+    "404": {
+      "title": "Page not found",
+      "subtext": "The page you're looking for doesn't exist"
+    },
+    "search": {
+      "no_results": "No products found",
+      "results_for": "Results for \"{{ terms }}\""
+    }
+  },
+  "newsletter": {
+    "label": "Email",
+    "success": "Thanks for subscribing",
+    "button": "Subscribe"
+  },
+  "cart": {
+    "general": {
+      "title": "Shopping Cart",
+      "note": "All prices in USD",
+      "empty_html": "Your cart is empty",
+      "cookies_required": "Enable cookies to use the shopping cart",
+      "edit": "Edit",
+      "remove": "Remove",
+      "continue_browsing": "Continue shopping",
+      "update": "Update cart",
+      "checkout": "Checkout",
+      "shipping": "Shipping",
+      "estimate_shipping": "Estimate shipping",
+      "taxes_included": "Taxes included",
+      "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout"
+    },
+    "label": {
+      "product": "Product",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "subtotal": "Subtotal",
+      "paid_each": "paid each"
+    }
+  },
+  "products": {
+    "general": {
+      "collection_label": "Collection",
+      "description": "Description",
+      "on_sale": "Sale",
+      "quantity": "Quantity",
+      "quantity_increments": "You can only add this item to the cart in quantities of {{ quantity }}",
+      "sale_price": "Sale price",
+      "sold_out": "Sold out",
+      "unavailable": "Unavailable",
+      "unit_price_label": "Unit price"
+    },
+    "product": {
+      "add_to_cart": "Add to cart",
+      "back_to_products": "Back to {{ title }}",
+      "description": "Product description",
+      "on_sale": "On sale",
+      "product_variants": "Product variants",
+      "quantity": "Quantity",
+      "rating": "Rating",
+      "regular_price": "Regular price",
+      "sale_price": "Sale price",
+      "sku": "SKU",
+      "stock_label": "Stock",
+      "inventory_quantity": "{{ quantity }} in stock",
+      "view_in_space": "View in your space"
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "My Account",
+      "login_title": "Sign in",
+      "reset_password_title": "Reset your password",
+      "register_title": "Create account",
+      "form": {
+        "email": "Email",
+        "password": "Password",
+        "password_confirm": "Confirm password",
+        "firstname": "First name",
+        "lastname": "Last name",
+        "phone": "Phone number"
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+[
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Background & Text"
+      },
+      {
+        "type": "color",
+        "id": "color_scheme_bg_1",
+        "label": "Background",
+        "default": "#FAFAF9"
+      },
+      {
+        "type": "color",
+        "id": "color_scheme_text_1",
+        "label": "Text",
+        "default": "#1C1917"
+      },
+      {
+        "type": "color",
+        "id": "color_scheme_secondary_text",
+        "label": "Secondary Text",
+        "default": "#57534E"
+      },
+      {
+        "type": "color",
+        "id": "color_scheme_border_1",
+        "label": "Border",
+        "default": "#E7E5E4"
+      },
+      {
+        "type": "header",
+        "content": "Accent Colors"
+      },
+      {
+        "type": "color",
+        "id": "color_scheme_accent_1",
+        "label": "Primary Accent",
+        "default": "#29B6F6"
+      },
+      {
+        "type": "color",
+        "id": "color_scheme_accent_1_hover",
+        "label": "Accent Hover",
+        "default": "#039BE5"
+      },
+      {
+        "type": "color",
+        "id": "color_scheme_frost_bg",
+        "label": "Frost Background",
+        "default": "#BCCCDC"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Heading Font"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading Font",
+        "default": "system-ui"
+      },
+      {
+        "type": "header",
+        "content": "Body Font"
+      },
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body Font",
+        "default": "system-ui"
+      },
+      {
+        "type": "range",
+        "id": "body_font_size",
+        "label": "Body Font Size",
+        "min": 12,
+        "max": 20,
+        "default": 16,
+        "unit": "px"
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "header_show_search",
+        "label": "Show search bar",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "header_logo_text",
+        "label": "Logo Text",
+        "default": "STAL"
+      }
+    ]
+  },
+  {
+    "name": "Homepage",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Hero Section"
+      },
+      {
+        "type": "text",
+        "id": "hero_title",
+        "label": "Hero Title",
+        "default": "Precision-Engineered Cutlery"
+      },
+      {
+        "type": "textarea",
+        "id": "hero_subtitle",
+        "label": "Hero Subtitle",
+        "default": "Brutalist minimalism meets functional precision. Hand-crafted 18/10 stainless steel flatware designed to last decades."
+      },
+      {
+        "type": "header",
+        "content": "Featured Collection"
+      },
+      {
+        "type": "collection",
+        "id": "featured_collection",
+        "label": "Featured Collection"
+      }
+    ]
+  },
+  {
+    "name": "Shop",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Filters"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_price_filter",
+        "label": "Show price filter",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_type_filter",
+        "label": "Show type filter",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_material_filter",
+        "label": "Show material filter",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "products_per_page",
+        "label": "Products per page",
+        "min": 6,
+        "max": 50,
+        "step": 1,
+        "default": 12
+      }
+    ]
+  },
+  {
+    "name": "Product",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Product Page"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_related_products",
+        "label": "Show related products",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_product_reviews",
+        "label": "Show product reviews",
+        "default": false
+      },
+      {
+        "type": "textarea",
+        "id": "product_trust_text",
+        "label": "Trust Badge Text",
+        "default": "30-day returns • Lifetime warranty • Free shipping over $100"
+      }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Newsletter"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_newsletter",
+        "label": "Show newsletter signup",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "footer_newsletter_title",
+        "label": "Newsletter Title",
+        "default": "Subscribe"
+      },
+      {
+        "type": "header",
+        "content": "Links"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_menu",
+        "label": "Footer Menu"
+      },
+      {
+        "type": "textarea",
+        "id": "footer_copyright",
+        "label": "Copyright Text",
+        "default": "&copy; 2026 STAL. All rights reserved."
+      }
+    ]
+  }
+]

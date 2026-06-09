@@ -1,6 +1,6 @@
 {
   "name": "STAL - Brutalist Cutlery",
-  "description": "Premium minimalist e-commerce theme for precision-engineered stainless steel cutlery. Brutalist design with cyan accents.",
+  "description": "Premium minimalist e-commerce theme for precision-engineered stainless steel cutlery",
   "version": "1.0.0",
   "api_version": "2024-10",
   "settings": {
@@ -11,5 +11,15 @@
     "color_scheme_border_1": "#E7E5E4",
     "color_scheme_secondary_text": "#57534E",
     "color_scheme_frost_bg": "#BCCCDC"
+  },
+  "presets": {
+    "Default": {
+      "colors": {
+        "bg_1": "#FAFAF9",
+        "text_1": "#1C1917",
+        "accent_1": "#29B6F6",
+        "border_1": "#E7E5E4"
+      }
+    }
   }
 }
